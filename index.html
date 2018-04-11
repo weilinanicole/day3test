@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span><</span>
+            <span>无连接</span>
+            <span>=</span>
+        </header>
+        <section>
+            <div class="tab">
+                <li class='on'>
+                    <span>电源</span> 电源
+                </li>
+                <li>
+                    <span>首页</span> 首页
+                </li>
+                <li>
+                    <span>菜单</span> 菜单
+                </li>
+                <li>
+                    <span>截屏</span> 截屏
+                </li>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide con">
+                        这是电源页面
+                    </div>
+                    <div class="swiper-slide con">
+                        这是首页页面
+                    </div>
+                    <div class="swiper-slide con">
+                        这是菜单页面
+                    </div>
+                    <div class="swiper-slide con">
+                        这是截屏页面
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            这是页脚
+        </footer>
+    </div>
+</body>
+<script src='js/swiper-3.4.2.min.js'></script>
+<script src='js/jquery-2.1.1.min.js'></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // onslidechangestart = function(e) {
+        //     console.log(e)
+        // }
+    })
+    var lis = $('.tab').children();
+    lis.on('click', function() {
+        var ind = $(this).index();
+        lis.removeClass('on');
+        $(this).addClass('on');
+        mySwiper.slideTo(ind)
+    })
+</script>
+
+</html>

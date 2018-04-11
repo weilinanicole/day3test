@@ -6,8 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 625%;
+        }
+        
+        body,
+        html,
+        .wrap {
+            width: 100%;
+            height: 100%;
+            font-size: .14rem;
+        }
+        
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            background: #eee;
+        }
+        
+        header {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 .1rem;
+            font-size: .18rem;
+        }
+        
+        section {
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        section .tab {
+            width: 100%;
+            height: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 .1rem;
+            font-size: .18rem;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        section .tab li {
+            text-align: center;
+        }
+        
+        section .tab li span {
+            width: 5rem;
+            height: 5rem;
+            display: block;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .on {
+            color: red
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            height: 100%;
+            font-size: .4rem;
+            border-bottom: 1px solid #fff;
+        }
+        
+        footer {
+            width: 100%;
+            height: 5rem;
+        }
+    </style>
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
